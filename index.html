@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Ricos FatiPOstres">
+    <meta name="author" content="Fatima Farfán Balcón">
+    <title>FatiPOstres</title>
+    <style>
+        body {
+            background-color: pink;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f3c1c1;
+        }
+
+        video, img, iframe {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1>FatiPOstres</h1></marquee>
+    <p>Bienvenidos a la página de FatiPOstres, contamos con postres de tu agrado como lo son: carlotas de diferentes sabores, pay de queso y flan napolitano.</p>
+    <p>Date la oportunidad de probar algo sabroso, y no, no eres tú... es <strong>FatiPOstres</strong> 😋</p>
+
+    <hr>
+
+    <button onclick="mostrar('menu')">Ver Menú</button>
+    <button onclick="mostrar('referencias')">Ver Referencias</button>
+    <button onclick="mostrar('contacto')">Contacto</button>
+    <button onclick="ocultarTodo()">Ocultar Todo</button>
+
+    <section id="menu">
+        <h2>Menú FatiPOstres</h2>
+        <ul>
+            <p><strong>LOS CLÁSICOS:</strong></p>
+            <li>Cheesecake de Oreo... $14</li>
+            <li>Carlota de Limón... $14</li>
+
+            <p><strong>OTROS:</strong></p>
+            <li>Carlota de Fresa... $14</li>
+            <li>Carlota de Durazno... $14</li>
+            <li>Carlota de Mango... $14</li>
+
+            <p><strong>ESPECIALES:</strong></p>
+            <li>Flan Napolitano (rebanada)... $30</li>
+            <li>Pay de Queso (rebanada)... $25</li>
+        </ul>
+
+        <video controls poster="imagenes/imagen2.avif" height="240" width="320" autoplay muted>
+            <source src="videos/postre.mp4" type="video/mp4">
+        </video>
+
+        <p>Pide tu postre ahora. Todo está hecho a mano, artesanalmente, con los mejores productos, la mejor calidad y el mejor sabor.</p>
+    </section>
+
+    <section id="referencias">
+        <h2>REFERENCIAS</h2>
+        <ul>
+            <li>"FatiPOstres están muy ricos y con precio accesible. ¡Gracias por su preferencia!"</li>
+            <li>"Deberían hacer FatiPOstres en presentación más grande." — Estamos trabajando en ello.</li>
+        </ul>
+        <p>Agradecemos cada comentario y seguiremos mejorando para ustedes. 💖</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pyndge8jmb0?si=0_4zvn0gdzCc0Ips" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="contacto">
+        <h2>Otros Servicios</h2>
+        <ul>
+            <li>Realización de postres personalizados (requiere de 2 a 3 días de anticipación).</li>
+            <li>Participación en eventos especiales (baby showers, fiestas infantiles, etc.).</li>
+        </ul>
+        <img src="imagenes/postre.jpeg" height="200" width="200" alt="Postre">
+        <h3>📞 Llámanos: 279-100-9240</h3>
+        <h3>📸 Instagram: @fatipostres_</h3>
+    </section>
+
+    <script>
+        function mostrar(id) {
+            ocultarTodo();
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function ocultarTodo() {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('referencias').style.display = 'none';
+            document.getElementById('contacto').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
